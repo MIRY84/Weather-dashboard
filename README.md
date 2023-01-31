@@ -38,3 +38,7 @@ SO THAT I can plan a trip accordingly
 The following image shows the web application's appearance and functionality:
 
 ![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./screenshot%20app.png)
+
+## License
+MIT
+
