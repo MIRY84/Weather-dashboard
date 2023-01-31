@@ -42,3 +42,5 @@ The following image shows the web application's appearance and functionality:
 ## License
 MIT
 
+## Test
+Follow the live link---->https://miry84.github.io/Weather-dashboard/
