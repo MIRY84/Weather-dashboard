@@ -46,6 +46,29 @@ wind.text("Wind: " + response.list[0].wind.speed + "KPH")
 $("#today").prepend(today)
 today.append(city, date, temp, humidity, wind)
 
+//creating cards and variables for 5DAY forecast
+for(i=0; i<5; i++){// loop through the days
+  var card = $("<div>");
+  card.addClass("card text-white bg-secondary mb-3 p-2");
+  $('#forecast').append(card);
+
+  var name = $("<h5>");
+  var date = moment().add(i+1, 'days').format('l'); // moment.js
+  name.html(date).addClass("card-title");
+
+  var icon = $("<img>");
+  icon.attr("src","https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png");;
+
+
+  var temp = $("<p>");
+  temp.html("Temp: " + response.list[i].main.temp +"°C");
+
+  var humidity = $("<p>");
+  humidity.html("Humidity: " + response.list[i].main.humidity +"%");
+
+  card.append(card, name, icon, temp, humidity)
+}
+
 
 
 
