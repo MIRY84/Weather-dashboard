@@ -42,7 +42,7 @@ $("#search-button").on("click", function (event) {
 
     //cretaing variables for today weather
     var card = $("<div>");
-    card.addClass("card text-white bg-dark mb-3 p-2")
+    card.addClass("card text-white bg-dark ml-3 p-2")
     var city = $("<h1>").text(response.city.name);
     var date = moment().format("DD/MM/YYYY")
     var icon = response.list[0].weather[0].icon;
@@ -64,7 +64,7 @@ $("#search-button").on("click", function (event) {
     //creating cards and variables for 5DAY forecast
     for (i = 0; i < 5; i++) {// loop through the days
       var card = $("<div>");
-      card.addClass("card text-white bg-secondary mb-3 p-2 ");
+      card.addClass("card text-white bg-secondary mb-3 p-3");
       $('#forecast').append(card);
 
       var name = $("<h4>");
