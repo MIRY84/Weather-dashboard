@@ -67,20 +67,22 @@ $("#search-button").on("click", function (event) {
       $('#forecast').append(card);
 
       var name = $("<h5>");
-      var date = moment().add(i + 1, 'days').format('l'); // moment.js
+      var date = moment().add(i + 1, 'days').format('DD/MM/YYYY'); // moment.js
       name.html(date).addClass("card-title");
 
       var icon = $("<img>");
-      icon.attr("src", "https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png");
+      icon.attr("src", "https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + ".png");
 
 
       var temp = $("<p>");
       temp.html("Temp: " + response.list[i].main.temp + "°C");
+      var wind = $("<p>");
+      wind.text("Wind: " + response.list[i].wind.speed + "KPH");
 
       var humidity = $("<p>");
       humidity.html("Humidity: " + response.list[i].main.humidity + "%");
 
-      card.append(card, name, icon, temp, humidity);
+      card.append(card, name, icon, temp, humidity, wind);
     }
   })
   });
